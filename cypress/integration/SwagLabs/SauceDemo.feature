@@ -1,10 +1,10 @@
-Feature: Buying shopping flow saucedemo
-@focus 
+Feature: Shopping flow
 
-Scenario : login with valid credentials 
-  Given I am on the SauceDemo login page
-  When I enter a valid username 
-  And I enter a valid password 
-  And I click the Login button
-  Then I should be logged in and redirected to the Products page
+Scenario: Shopping flow successfully
+    Given I Want to buy things from SauceDemo
+    When Login to the Page
+    And add products to my shopping cart
+    And and I complete and confirm the shopping form
+    Then I receive a confirmation of my order with the information of my purchace
+
 

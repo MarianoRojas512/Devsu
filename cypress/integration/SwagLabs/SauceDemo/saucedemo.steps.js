@@ -1,24 +1,34 @@
 import ShoppingFlow from "./saucedemo.page"
 
-// Login successfully
+// Shopping flow
 
-
-Given(/^I am on the SauceDemo login page$/, () => {
-ShoppingFlow.VisitPage
+Given(/^I Want to buy things from SauceDemo$/, () => {
+    ShoppingFlow.VisitPage
+ 
+});
+When(/^Login to the Page$/, () => {
+    ShoppingFlow.UsernameType
+    ShoppingFlow.PasswordType
+    ShoppingFlow.LoginClick
+    ShoppingFlow.MainScreen
 });
 
-When(/^I enter a valid username$/, () => {
-	return true;
+When(/^add products to my shopping cart$/, () => {
+	ShoppingFlow.Addone
+    ShoppingFlow.Addtwo
 });
 
-When(/^I enter a valid password$/, () => {
-	return true;
+When(/^and I complete and confirm the shopping form$/, () => {
+	ShoppingFlow.ShoppingCart
+    ShoppingFlow.TitleCart
+    ShoppingFlow.Buy
+    ShoppingFlow.Formcompletion
+    ShoppingFlow.Continuebuy
+    ShoppingFlow.PurchaseInfo
+    ShoppingFlow.Finish
 });
 
-When(/^I click the Login button$/, () => {
-	return true;
+Then(/^I receive a confirmation of my order with the information of my purchace$/, () => {
+	ShoppingFlow.PurchaseConfirmation
 });
 
-Then(/^I should be logged in and redirected to the Products page$/, () => {
-	return true;
-});
