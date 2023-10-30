@@ -1,0 +1,8 @@
+
+En este proyecto se realizaron dos tipos de pruebas:
+    > E2E test de la pagina Sauce Demo realizando una compra
+    > API test para https://petstore.swagger.io/v2 con diferentes requests
+
+Encontraran en la carpeta Integration la info correspondiente a los test y en la carpeta services los comandos
+correspondientes a las request de las API para dichos tests.
+
